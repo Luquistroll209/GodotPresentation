@@ -15,27 +15,66 @@
 	</head>
 	<body>
 		<div class="reveal">
-			<div class="slides" >
+			<div class="slides">
+				<!-- Slide inicial con la imagen -->
 				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)">
-					<img src="img/logo_large_color_dark.webp">
+					<img src="img/logo_large_color_dark.webp" alt="Logo" style="border: none; box-shadow: none;">
 				</section>
-				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)">
+
+				<!-- Introducción -->
+				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="zoom">
 					<h1>Introducción</h1>
+					<p>Bienvenidos a la presentación sobre Godot Engine.</p>
 				</section>
-				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)">
+
+				<!-- Creadores de Godot -->
+				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="slide">
+					<h2>Los Creadores</h2>
+					<div style="display: flex; justify-content: space-around; align-items: center;">
+						<div>
+							<img src="img/juanLinietsky.jpg" alt="Juan Linietsky" style="width: 200px; height: 200px; border-radius: 50%;">
+							<p>Juan Linietsky</p>
+							<img src="img/España.webp" style="width: 200px; border-radius: 20px; margin: 0px;">
+						</div>
+						<div>
+							<img src="img/ariel_manzur.jpg" alt="Ariel Manzur" style="width: 200px; height: 200px; border-radius: 50%;">
+							<p>Ariel Manzur</p>
+							<img src="img/argentina.png" style="width: 200px; border-radius: 20px; margin: 0px;">
+						</div>
+					</div>
+				</section>
+
+				<!-- Historia -->
+				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="slide">
 					<h1>Historia</h1>
 				</section>
-				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)">
+
+				<!-- Godot 1.0 -->
+				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="convex">
 					<h1>Godot 1.0</h1>
+					<p>La primera versión estable de Godot.</p>
+					<img src="img/godot_1.0.png" alt="Godot 1.0" style="width: 60%;">
 				</section>
-				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)">
+
+				<!-- Godot 2.0 -->
+				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="concave">
 					<h1>Godot 2.0</h1>
+					<p>Mejoras significativas en la interfaz y rendimiento.</p>
+					<img src="img/godot_2.0.png" alt="Godot 2.0" style="width: 60%;">
 				</section>
-				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)">
+
+				<!-- Godot 3.0 -->
+				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="fade">
 					<h1>Godot 3.0</h1>
+					<p>Introducción de nuevas características y soporte para más plataformas.</p>
+					<img src="img/godot_3.0.png" alt="Godot 3.0" style="width: 60%;">
 				</section>
-				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)">
+
+				<!-- Godot 4.0 -->
+				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="zoom">
 					<h1>Godot 4.0</h1>
+					<p>La última versión con mejoras en gráficos y rendimiento.</p>
+					<img src="img/godot_4.0.png" alt="Godot 4.0" style="width: 60%;">
 				</section>
 			</div>
 		</div>
@@ -50,8 +89,8 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
+				transition: 'slide', // Transición por defecto
+				backgroundTransition: 'zoom', // Transición de fondo
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>

@@ -100,8 +100,8 @@
 						<div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
 						  <img src="img/Node3D.png" alt="Nodo 3D" style="width: 200px;" data-id="node3d">
 						  <div style="display: flex; gap: 20px;">
-							<img class="fragment fade-in" src="img/Sprite2D.png" alt="Sprite 2D"  style="width: 190px;" data-id="Sprite2D">
-							<img class="fragment fade-in" src="img/Sprite2D.png" alt="Sprite 2D" style="width: 190px;" data-id="Sprite2D">
+							<img src="img/PlayerModel.png" alt="Sprite 2D2"  style="width: 190px; transition: transform 0.8s ease; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);" data-id="Sprite2D2">
+							<img src="img/CharacterBody.png" alt="Sprite 2D2" style="width: 190px; transition: transform 0.8s ease; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);" data-id="Sprite2D">
 						  </div>
 						</div>
 					   </div>
@@ -112,22 +112,23 @@
 					<div style="display: flex; flex-direction: column; align-items: center; height: 100%;">
 						<img src="img/Nodo2D.png" alt="Escena Principal"style="width: 400px; border-radius: 15px; box-shadow: 0 0 20px rgba(0,0,0,0.5); opacity: 0.5;" data-id="scene">
 					  <div style="display: flex; gap: 50px; margin-top: 40px;">
-						<div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
-						  <img src="img/Node3D.png" alt="Nodo 3D" style="width: 200px;" data-id="node3d">
-						  <div style="display: flex; gap: 20px;">
-							<img class="fragment fade-in" src="img/Sprite2D.png" alt="Sprite 2D"  style="width: 190px;" data-id="Sprite2D">
-							<img class="fragment fade-in" src="img/Sprite2D.png" alt="Sprite 2D" style="width: 190px;" data-id="Sprite2D">
-						  </div>
-						</div>
+						<div style="display: flex; gap: 50px; margin-top: 40px;">
+							<div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+							  <img src="img/Node3D.png" alt="Nodo 3D" style="width: 200px;" data-id="node3d">
+							  <div style="display: flex; gap: 20px;">
+								<img src="img/PlayerModel.png" alt="Sprite 2D2"  style="width: 190px; transition: transform 0.8s ease; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);" data-id="Sprite2D2">
+								<img src="img/CharacterBody.png" alt="Sprite 2D2" style="width: 190px; transition: transform 0.8s ease; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);" data-id="Sprite2D">
+							  </div>
+							</div>
 				  
 						<div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
-						  <img class="fragment fade-in" data-fragment-index="4" src="img/Node3D.png" alt="Nodo 3D"
-							style="width: 200px;" data-id="node3d">
+						  <img data-fragment-index="4" src="img/Sprite2D.png" alt="Nodo 3D"
+							style="width: 220px; transition: transform 0.8s ease; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);" data-id="node3d">
 						  <div style="display: flex; gap: 20px;">
-							<img class="fragment fade-in" data-fragment-index="5" src="img/Sprite2D.png" alt="Sprite 2D"
-							  style="width: 190px;" data-id="Sprite2D">
-							<img class="fragment fade-in" data-fragment-index="6" src="img/Sprite2D.png" alt="Sprite 2D"
-							  style="width: 190px;" data-id="Sprite2D">
+							<img data-fragment-index="5" src="img/ColisionShape2D.png" alt="Sprite 2D"
+							  style="width: 190px; transition: transform 0.8s ease; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);" data-id="Sprite2D">
+							<img data-fragment-index="6" src="img/Sprite2D.png" alt="Sprite 2D"
+							  style="width: 190px; transition: transform 0.8s ease; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);" data-id="Sprite2D">
 						  </div>
 						</div>
 					  </div>
@@ -136,9 +137,74 @@
 				  
 				  <section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-auto-animate>
 					<div style="display: flex; flex-direction: column; align-items: center; gap: 30px;">
-					  <img src="img/escena_completa.png" alt="Escena Completa"
-						style="width: 500px; border-radius: 20px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+					  <img src="img/EscenaCompleta.png" alt="Escena Completa"
+						style="width: 300px; border-radius: 20px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
 					</div>
+				  </section>
+				  <section data-transition="zoom" data-background-gradient="radial-gradient(#1fa1dd, #1d2229)">
+					<h2>GDScript - Movimiento Básico</h2>
+					<pre><code class="language-python" data-line-numbers>
+				  extends CharacterBody2D
+				  
+				  func _physics_process(delta):
+					  var speed = 200
+					  var direction = Vector2.ZERO
+					  if Input.is_action_pressed("ui_right"):
+						  direction.x += 1
+					  if Input.is_action_pressed("ui_left"):
+						  direction.x -= 1
+					  velocity = direction * speed
+					  move_and_slide()
+					</code></pre>
+				  </section>
+				  
+				  <section data-transition="convex" data-background-gradient="radial-gradient(#9B4993, #000)">
+					<h2>C# - Movimiento Básico</h2>
+					<pre><code class="language-csharp" data-line-numbers>
+				  using Godot;
+				  public partial class Player : CharacterBody2D
+				  {
+					  public override void _PhysicsProcess(double delta)
+					  {
+						  float speed = 200f;
+						  Vector2 direction = Vector2.Zero;
+						  if (Input.IsActionPressed("ui_right")) direction.x += 1;
+						  if (Input.IsActionPressed("ui_left")) direction.x -= 1;
+						  Velocity = direction * speed;
+						  MoveAndSlide();
+					  }
+				  }
+					</code></pre>
+				  </section>
+				  
+				  <section data-transition="fade" data-background-gradient="radial-gradient(#0f2027, #044F88, #2c5364)">
+					<h2>C++ - Movimiento Básico</h2>
+					<pre><code class="language-cpp">
+				  #include <godot_cpp/classes/character_body2d.hpp>
+				  #include <godot_cpp/classes/input.hpp>
+				  
+				  using namespace godot;
+				  
+				  class Player : public CharacterBody2D {
+					  GDCLASS(Player, CharacterBody2D);
+				  public:
+					  void _physics_process(double delta) {
+						  const float speed = 200.0;
+						  Vector2 dir = Vector2();
+						  if (Input::get_singleton()->is_action_pressed("ui_right")) dir.x += 1;
+						  if (Input::get_singleton()->is_action_pressed("ui_left"))  dir.x -= 1;
+						  velocity = dir * speed;
+						  move_and_slide();
+					  }
+				  };
+					</code></pre>
+				  </section>
+				  
+				  <section data-transition="slide" data-background-gradient="radial-gradient(#4b1248, #f0c27b)">
+					<h2>¿Cuál elegir?</h2>
+					<p class="fragment" data-fragment-index="1">✨ <strong>GDScript</strong> - Rápido, simple y nativo de Godot.</p>
+					<p class="fragment" data-fragment-index="2">⚡ <strong>C#</strong> - Más robusto, ideal para proyectos grandes.</p>
+					<p class="fragment" data-fragment-index="3">🔥 <strong>C++</strong> - Máximo rendimiento para optimización extrema.</p>
 				  </section>
 				  
 			</div>

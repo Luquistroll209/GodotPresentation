@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Godot</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -17,19 +17,18 @@
 		<div class="reveal">
 			<div class="slides">
 				<!-- Slide inicial con la imagen -->
-				<section data-background-video="img/VideoFondo.mp4">
+				<section data-background-video="img/VideoFondo.mp4" data-notes="Hola a todos voy a presentar mi motor favorito, godot">
 					<img style="background-color: #1c2d35f1; border-radius: 200px; box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.603);" src="img/logo_large_color_dark.webp" alt="Logo">
 				</section>
 				
 
 				<!-- Introducción -->
-				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="zoom">
-					<h1>Introducción</h1>
-					<p>Bienvenidos a la presentación sobre Godot Engine.</p>
+				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="zoom" data-notes="Godot es un motor, puede usarse para videjuegos como para cualquier otra cosa. creado en 2007 y es codigo abierto">
+					<h1>¿Que es Godot?</h1>
 				</section>
 
 				<!-- Creadores de Godot -->
-				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="slide">
+				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="slide" data-notes="Empieza en 2007 cuando juanLinietsky comenzo un proyecto personal un motor para el. al que se le unio ariel_manzur">
 					<h2>Los Creadores</h2>
 					<div style="display: flex; justify-content: space-around; align-items: center;">
 						<div>
@@ -51,25 +50,25 @@
 				</section>
 
 				<!-- Godot 1.0 -->
-				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="convex">
+				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="convex" data-notes="2014 y codigo abierto">
 					<h1>Godot 1.0</h1>
 					<img src="img/Godot1.png" alt="Godot 1.0" style="border-radius: 20px; border: 2px solid black; box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.438);">
 				</section>
 
 				<!-- Godot 2.0 -->
-				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="concave">
+				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="concave" data-notes="2016 mejor interfaz y sistem animacion">
 					<h1>Godot 2.0</h1>
 					<img src="img/Godot2.png" alt="Godot 1.0" style="border-radius: 20px; border: 2px solid black; box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.438);">
 				</section>
 
 				<!-- Godot 3.0 -->
-				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="concave">
+				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="concave" data-notes="2018-2022 Renderizado PBR(Materiales metalicos) y GDNative(Mayor disponibilidad de librerias), soporte de VR, Comtabilidad html, Mejora de fisicas, Navegación 3D">
 					<h1>Godot 3.0</h1>
 					<img src="img/Godot3.png" alt="Godot 1.0" style="border-radius: 20px; border: 2px solid black; box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.438);">
 				</section>
 
 				<!-- Godot 4.0 -->
-				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="zoom">
+				<section data-background-gradient="radial-gradient(#1d2229, #1fa1dd)" data-transition="zoom" data-notes="2023 adelante. Vulkan, Nueva GUI, GDscript Mejora, Optimizaciónm, más herramientas">
 					<h1>Godot 4.0</h1>
 					<img src="img/Godot4.png" alt="Godot 1.0" style="border-radius: 20px; border: 2px solid black; box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.438);">
 				</section>
@@ -203,11 +202,40 @@
 				  
 				  <section data-transition="slide" data-background-gradient="radial-gradient(#4b1248, #f0c27b)">
 					<h2>¿Cuál elegir?</h2>
-					<p class="fragment" data-fragment-index="1">✨ <strong>GDScript</strong> - Rapido y Simple</p>
-					<p class="fragment" data-fragment-index="2">⚡ <strong>C#</strong> - ideal para proyectos grandes.</p>
-					<p class="fragment" data-fragment-index="3">🔥 <strong>C++</strong> - Mayor rapidez</p>
+					<p>✨ <strong>GDScript</strong> - Rapido y Simple</p>
+					<p>⚡ <strong>C#</strong> - ideal para proyectos grandes.</p>
+					<p>🔥 <strong>C++</strong> - Mayor rapidez</p>
 				  </section>
-				  
+				  <section data-transition="slide" data-background-gradient="radial-gradient(#1fa1dd, #1d2229)">
+					<h2>¿Como crear un proyecto?</h2>
+				  </section>
+				  <section data-transition="slide" data-background-gradient="radial-gradient(#d12929, #1d2229)				  ">
+						<img src="img/Node3D.png" alt="">
+						<br>
+						<img src="img/Camera.png" alt="">
+						<img src="img/ColisionShape.png" alt="">
+						<img src="img/RigiBody.png" alt="">
+						<img src="img/CSG.png" alt="">
+						<img src="img/CharacterBody.png" alt="">
+				  </section>
+				<section data-transition="slide" data-background-gradient="radial-gradient(#8e2bb2, #1d2229)				">
+					<img src="img/Nodo2D.png" alt="">
+					<br>
+					<img src="img/Camera2D.png" alt="">
+					<img src="img/ColisionShape2D.png" alt="">
+					<img src="img/Rigibody2D.png" alt="">
+					<img src="img/Sprite2D.png" alt="">
+					<img src="img/CharacterBody2D.png" alt="">
+			    </section>
+				<section data-transition="slide" data-background-gradient="radial-gradient(#00b300, #1d2229)
+				">
+					<img src="img/CanvaLayer.png" alt="">
+					<br>
+					<img src="img/Control.png" alt="">
+					<img src="img/Label.png" alt="">
+					<img src="img/Panel.png" alt="">
+					<img src="img/TextureReact.png" alt="">
+			    </section>
 			</div>
 		</div>
 
